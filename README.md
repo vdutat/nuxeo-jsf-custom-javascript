@@ -1,0 +1,1 @@
+# nuxeo-jsf-custom-javascript
