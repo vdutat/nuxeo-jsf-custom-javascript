@@ -1,0 +1,22 @@
+<component name="SUPNXP-14324">
+
+  <require>org.nuxeo.theme.core</require>
+  <require>org.nuxeo.theme.fragments</require>
+  <require>org.nuxeo.theme.html</require>
+  <require>org.nuxeo.theme.jsf</require>
+  <require>org.nuxeo.theme.nuxeo.default</require>
+
+<extension point="resources" target="org.nuxeo.theme.services.ThemeService">
+	<resource name="helloworld.js">
+	  <path>helloworld.js</path>
+	</resource>
+</extension>
+
+<extension target="org.nuxeo.theme.services.ThemeService" point="views">
+    <view name="nuxeo5 includes" template-engine="jsf-facelets" merge="true">
+        <format-type>widget</format-type>
+		<resource>helloworld.js</resource>
+    </view>
+</extension>
+
+</component>

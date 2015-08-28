@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fragment version="1">
+
+  <require>org.nuxeo.ecm.user.center.profile</require>
+  <require>org.nuxeo.ecm.platform.io.core</require>
+  <require>org.nuxeo.ecm.platform.lang</require>
+
+  <install>
+    <delete path="${bundle.fileName}.tmp" />
+    <unzip from="${bundle.fileName}" to="${bundle.fileName}.tmp" />
+    <copy from="${bundle.fileName}.tmp/web/nuxeo.war" to="/" />
+
+    <delete path="${bundle.fileName}.tmp" />
+  </install>
+</fragment>
